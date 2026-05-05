@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gstaad Garage — Детейлинг Санкт-Петербург</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+gold: { DEFAULT: '#c9a962', light: '#e8d5a3', dark: '#9a7b3a' },
+silver: { DEFAULT: '#c0c4cc', muted: '#8b909a' }
+},
+fontFamily: {
+sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif']
+}
+}
+}
+}
+</script>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body class="bg-black text-gray-300 antialiased selection:bg-gold/30 selection:text-white">
+<header class="fixed top-0 left-0 right-0 z-50 glass-header bg-black/60 border-b border-white/5">
+<div class="layout-shell py-4 flex items-center justify-between gap-6">
+<a href="#" class="group flex items-center gap-2">
+<span class="brand-mark">Gstaad Garage</span>
+</a>
+<nav class="hidden md:flex items-center gap-10 text-sm tracking-wide">
+<a href="#services" class="nav-link">Услуги</a>
+<a href="#about" class="nav-link">О нас</a>
+<a href="#contacts" class="nav-link">Контакты</a>
+</nav>
+<a href="#contacts" class="hidden sm:inline-flex btn-shine btn-book">
+<i class="fa-solid fa-calendar-check text-xs"></i>
+Записаться
+</a>
+<button type="button" id="menuBtn" class="md:hidden text-white p-2 rounded-xl border border-white/10 hover:border-gold/40 transition-colors" aria-label="Меню">
+<i class="fa-solid fa-bars text-lg"></i>
+</button>
+</div>
+<div id="mobileNav" class="hidden md:hidden border-t border-white/5 bg-black/95 backdrop-blur-xl layout-shell py-4 flex flex-col gap-4">
+<a href="#services" class="mobile-link text-gray-300 py-2 border-b border-white/5">Услуги</a>
+<a href="#about" class="mobile-link text-gray-300 py-2 border-b border-white/5">О нас</a>
+<a href="#contacts" class="mobile-link text-gray-300 py-2 border-b border-white/5">Контакты</a>
+<a href="#contacts" class="btn-shine btn-book-mobile">
+<i class="fa-solid fa-calendar-check"></i>
+Записаться
+</a>
+</div>
+</header>
+
+<main class="pt-24">
+<section class="relative min-h-[88vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(201,169,98,0.15),transparent)] pointer-events-none"></div>
+<div class="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,rgba(0,0,0,0.9))] pointer-events-none"></div>
+<div class="relative max-w-4xl mx-auto px-5 text-center">
+<p class="text-gold/90 text-xs tracking-[0.35em] uppercase mb-6">Premium detailing</p>
+<h1 class="text-white text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight leading-[1.1] mb-6">
+Gstaad Garage — Профессиональный детейлинг в Санкт-Петербурге
+</h1>
+<p class="text-gray-400 text-lg sm:text-xl font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+Вернем вашему автомобилю первозданный вид
+</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<a href="https://t.me/GstaadDetailing" target="_blank" rel="noopener noreferrer" class="btn-shine btn-telegram">
+<i class="fa-brands fa-telegram text-xl"></i>
+Связаться в Telegram
+</a>
+<a href="#services" class="text-sm text-gray-500 hover:text-gray-300 transition-colors duration-300 flex items-center gap-2 py-2">
+<i class="fa-solid fa-arrow-down text-xs"></i>
+Услуги
+</a>
+</div>
+</div>
+</section>
+
+<section id="services" class="py-24 px-5 border-t border-white/5">
+<div class="layout-shell">
+<div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+<div>
+<h2 class="section-title mb-3">Услуги</h2>
+<p class="text-gray-500 max-w-md text-sm leading-relaxed">Комплексный уход и восстановление. Технологии премиум-класса и внимание к деталям.</p>
+</div>
+<div class="divider-gold"></div>
+</div>
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+<article class="service-card">
+<div class="service-icon">
+<i class="fa-solid fa-droplet text-gold"></i>
+</div>
+<h3 class="text-white text-lg font-medium mb-2">Детейлинг-мойка</h3>
+<p class="text-gray-500 text-sm leading-relaxed">Бережная многоступенчатая мойка кузова и колес без компромиссов по качеству.</p>
+</article>
+<article class="service-card">
+<div class="service-icon">
+<i class="fa-solid fa-wand-magic-sparkles text-gold"></i>
+</div>
+<h3 class="text-white text-lg font-medium mb-2">Полировка кузова</h3>
+<p class="text-gray-500 text-sm leading-relaxed">Устранение дефектов ЛКП, глубокий блеск и подготовка под защитные покрытия.</p>
+</article>
+<article class="service-card">
+<div class="service-icon">
+<i class="fa-solid fa-shield-halved text-gold"></i>
+</div>
+<h3 class="text-white text-lg font-medium mb-2">Керамическое покрытие</h3>
+<p class="text-gray-500 text-sm leading-relaxed">Долговременная защита лакокрасочного покрытия и выраженный гидрофобный эффект.</p>
+</article>
+<article class="service-card">
+<div class="service-icon">
+<i class="fa-solid fa-couch text-gold"></i>
+</div>
+<h3 class="text-white text-lg font-medium mb-2">Химчистка салона</h3>
+<p class="text-gray-500 text-sm leading-relaxed">Глубокая очистка обивки, кожи и пластика с сохранением фактуры материалов.</p>
+</article>
+<article class="service-card sm:col-span-2 lg:col-span-1">
+<div class="service-icon">
+<i class="fa-solid fa-layer-group text-gold"></i>
+</div>
+<h3 class="text-white text-lg font-medium mb-2">Оклейка пленкой (PPF)</h3>
+<p class="text-gray-500 text-sm leading-relaxed">Защита ЛКП от сколов и царапин прозрачной полиуретановой пленкой премиум-сегмента.</p>
+</article>
+</div>
+</div>
+</section>
+
+<section id="gallery" class="py-24 px-5 bg-white/[0.015] border-y border-white/5">
+<div class="layout-shell">
+<h2 class="section-title mb-4 text-center">Отзывы и карты</h2>
+<p class="text-gray-500 text-sm text-center max-w-lg mx-auto mb-14">Скриншоты с Яндекс Карт — вставьте изображения в блоки ниже.</p>
+<div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+<div class="ph-frame aspect-[4/3] flex items-center justify-center min-h-[220px]">
+<span class="text-gray-600 text-sm tracking-wide">Плейсхолдер</span>
+</div>
+<div class="ph-frame aspect-[4/3] flex items-center justify-center min-h-[220px]">
+<span class="text-gray-600 text-sm tracking-wide">Плейсхолдер</span>
+</div>
+<div class="ph-frame aspect-video md:col-span-2 flex items-center justify-center min-h-[200px]">
+<span class="text-gray-600 text-sm tracking-wide">Плейсхолдер</span>
+</div>
+</div>
+</div>
+</section>
+
+<section id="about" class="py-24 px-5">
+<div class="layout-shell grid lg:grid-cols-2 gap-14 items-center">
+<div>
+<h2 class="section-title mb-6">О нас</h2>
+<p class="text-gray-400 leading-relaxed mb-5">
+Gstaad Garage — студия детейлинга в Санкт-Петербурге. Мы работаем с автомобилями премиального сегмента и соединяем технологичность процессов с эстетикой результата.
+</p>
+<p class="text-gray-500 text-sm leading-relaxed mb-8">
+Каждый этап прозрачен: диагностика состояния ЛКП и салона, подбор составов и режимов, финальный контроль качества перед выдачей.
+</p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3 text-gray-400 text-sm">
+<i class="fa-solid fa-circle-check text-gold mt-0.5"></i>
+<span>Сертифицированные материалы и оборудование</span>
+</li>
+<li class="flex items-start gap-3 text-gray-400 text-sm">
+<i class="fa-solid fa-circle-check text-gold mt-0.5"></i>
+<span>Индивидуальный подход к каждому автомобилю</span>
+</li>
+<li class="flex items-start gap-3 text-gray-400 text-sm">
+<i class="fa-solid fa-circle-check text-gold mt-0.5"></i>
+<span>Комфортная запись и сопровождение на всех этапах</span>
+</li>
+</ul>
+</div>
+<div class="rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-transparent p-10 lg:p-12 aspect-square lg:aspect-auto lg:min-h-[380px] flex flex-col justify-center">
+<p class="text-gold/80 text-xs tracking-[0.3em] uppercase mb-4">Стандарты</p>
+<p class="text-white text-2xl font-light leading-snug mb-6">
+Точность. Спокойствие. Результат, который видно и по ощущениям.
+</p>
+<p class="text-gray-500 text-sm leading-relaxed">
+Минимализм в подаче — максимум в работе с поверхностью вашего автомобиля.
+</p>
+</div>
+</div>
+</section>
+
+<section id="contacts" class="py-24 px-5 border-t border-white/5">
+<div class="layout-shell">
+<h2 class="section-title mb-12 text-center">Контакты</h2>
+<div class="grid lg:grid-cols-2 gap-8 items-stretch">
+<div class="rounded-2xl border border-white/10 bg-white/[0.02] p-8 lg:p-10 flex flex-col justify-center">
+<div class="flex items-start gap-4 mb-8">
+<div class="w-11 h-11 rounded-xl bg-gold/10 border border-gold/25 flex items-center justify-center shrink-0">
+<i class="fa-solid fa-location-dot text-gold"></i>
+</div>
+<div>
+<p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Адрес</p>
+<p class="text-white text-lg font-light">Санкт-Петербург</p>
+<p class="text-gray-500 text-sm mt-2">Уточняйте точку на карте или в Telegram перед визитом.</p>
+</div>
+</div>
+<a href="https://t.me/GstaadDetailing" target="_blank" rel="noopener noreferrer" class="btn-shine btn-book-lg">
+<i class="fa-brands fa-telegram text-xl"></i>
+Telegram — @GstaadDetailing
+</a>
+</div>
+<div class="ph-frame min-h-[320px] flex flex-col items-center justify-center gap-3 p-8">
+<i class="fa-solid fa-map-location-dot text-3xl text-gold/40"></i>
+<span class="text-gray-600 text-sm tracking-wide text-center">Место под карту</span>
+<span class="text-gray-700 text-xs">Вставьте iframe Яндекс.Карт или статичное изображение</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="border-t border-white/5 py-10 px-5">
+<div class="layout-shell flex flex-col sm:flex-row items-center justify-between gap-6">
+<span class="text-gray-600 text-sm tracking-[0.15em] uppercase">© Gstaad Garage</span>
+<div class="flex items-center gap-8">
+<a href="#services" class="text-sm text-gray-500 footer-link">Услуги</a>
+<a href="https://t.me/GstaadDetailing" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-500 footer-link">Telegram</a>
+</div>
+</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
