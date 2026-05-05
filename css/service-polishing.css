@@ -319,12 +319,14 @@ ul {
 .btn--primary {
  background: #ffffff;
  color: #000000;
+ border: 1px solid #000000;
  box-shadow: none;
 }
 
 .btn--primary:hover {
- background: rgba(255, 255, 255, 0.88);
- color: #000000;
+ background: #000000;
+ color: #ffffff;
+ border-color: #000000;
  box-shadow: none;
 }
 
@@ -357,14 +359,14 @@ ul {
 .btn--hero-solid {
  background: #ffffff;
  color: #000000;
- border: 1px solid #ffffff;
+ border: 1px solid #000000;
  box-shadow: none;
 }
 
 .btn--hero-solid:hover {
- background: rgba(255, 255, 255, 0.88);
- border-color: rgba(255, 255, 255, 0.88);
- color: #000000;
+ background: #000000;
+ color: #ffffff;
+ border-color: #000000;
  box-shadow: none;
 }
 
@@ -672,7 +674,7 @@ ul {
  inset: 0;
  z-index: 0;
  pointer-events: none;
- opacity: 0.065;
+ opacity: 0.08;
  background-image:
  linear-gradient(rgba(255, 255, 255, 0.26) 1px, transparent 1px),
  linear-gradient(90deg, rgba(255, 255, 255, 0.26) 1px, transparent 1px);
@@ -790,28 +792,6 @@ ul {
 .service-card:hover .service-card__cta {
  color: var(--accent);
  gap: 0.55rem;
-}
-
-.footer-map {
- padding: 0 0 2rem;
-}
-
-.footer-map__frame {
- width: 100%;
- margin: 0;
- border-radius: var(--radius);
- overflow: hidden;
- border: 1px solid rgba(255, 255, 255, 0.12);
- box-shadow: 0 16px 56px rgba(0, 0, 0, 0.45);
- background: #0a0a0a;
- height: 350px;
-}
-
-.footer-map__frame iframe {
- display: block;
- width: 100%;
- height: 350px;
- border: 0;
 }
 
 .footer-strip {
@@ -1392,11 +1372,6 @@ ul {
 
  .svc-detail__grid {
  gap: 1.25rem;
- }
-
- .footer-map__frame {
- height: 350px;
- min-height: 350px;
  }
 
  .footer-strip__inner {

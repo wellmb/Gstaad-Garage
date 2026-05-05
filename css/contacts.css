@@ -319,12 +319,14 @@ ul {
 .btn--primary {
  background: #ffffff;
  color: #000000;
+ border: 1px solid #000000;
  box-shadow: none;
 }
 
 .btn--primary:hover {
- background: rgba(255, 255, 255, 0.88);
- color: #000000;
+ background: #000000;
+ color: #ffffff;
+ border-color: #000000;
  box-shadow: none;
 }
 
@@ -357,14 +359,14 @@ ul {
 .btn--hero-solid {
  background: #ffffff;
  color: #000000;
- border: 1px solid #ffffff;
+ border: 1px solid #000000;
  box-shadow: none;
 }
 
 .btn--hero-solid:hover {
- background: rgba(255, 255, 255, 0.88);
- border-color: rgba(255, 255, 255, 0.88);
- color: #000000;
+ background: #000000;
+ color: #ffffff;
+ border-color: #000000;
  box-shadow: none;
 }
 
@@ -622,7 +624,7 @@ ul {
  inset: 0;
  z-index: 0;
  pointer-events: none;
- opacity: 0.065;
+ opacity: 0.08;
  background-image:
  linear-gradient(rgba(255, 255, 255, 0.26) 1px, transparent 1px),
  linear-gradient(90deg, rgba(255, 255, 255, 0.26) 1px, transparent 1px);

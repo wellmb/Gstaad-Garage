@@ -319,12 +319,14 @@ ul {
 .btn--primary {
  background: #ffffff;
  color: #000000;
+ border: 1px solid #000000;
  box-shadow: none;
 }
 
 .btn--primary:hover {
- background: rgba(255, 255, 255, 0.88);
- color: #000000;
+ background: #000000;
+ color: #ffffff;
+ border-color: #000000;
  box-shadow: none;
 }
 
@@ -357,14 +359,14 @@ ul {
 .btn--hero-solid {
  background: #ffffff;
  color: #000000;
- border: 1px solid #ffffff;
+ border: 1px solid #000000;
  box-shadow: none;
 }
 
 .btn--hero-solid:hover {
- background: rgba(255, 255, 255, 0.88);
- border-color: rgba(255, 255, 255, 0.88);
- color: #000000;
+ background: #000000;
+ color: #ffffff;
+ border-color: #000000;
  box-shadow: none;
 }
 
@@ -625,7 +627,7 @@ ul {
  inset: 0;
  z-index: 0;
  pointer-events: none;
- opacity: 0.065;
+ opacity: 0.08;
  background-image:
  linear-gradient(rgba(255, 255, 255, 0.26) 1px, transparent 1px),
  linear-gradient(90deg, rgba(255, 255, 255, 0.26) 1px, transparent 1px);
@@ -781,6 +783,12 @@ ul {
  gap: 1.75rem;
 }
 
+a.service-card {
+ text-decoration: none;
+ color: inherit;
+ -webkit-tap-highlight-color: transparent;
+}
+
 .service-card {
  position: relative;
  padding: 0;
@@ -822,7 +830,7 @@ ul {
  border-radius: inherit;
  z-index: 1;
  pointer-events: none;
- opacity: 0.065;
+ opacity: 0.08;
  background-image:
  linear-gradient(rgba(255, 255, 255, 0.26) 1px, transparent 1px),
  linear-gradient(90deg, rgba(255, 255, 255, 0.26) 1px, transparent 1px);
@@ -870,17 +878,10 @@ ul {
  transform: scale(1.05);
 }
 
-.service-card__hit {
- position: absolute;
- inset: 0;
- z-index: 4;
- border-radius: inherit;
-}
-
-.service-card__hit:focus-visible {
- outline: 2px solid var(--accent);
- outline-offset: 3px;
- z-index: 5;
+.service-card:focus-visible {
+ outline: 2px solid #ffffff;
+ outline-offset: 4px;
+ z-index: 6;
 }
 
 .service-card__title {
@@ -889,6 +890,7 @@ ul {
  font-weight: 600;
  margin: 0 0 0.5rem;
  color: var(--accent);
+ display: block;
 }
 
 .service-card__text {
@@ -897,6 +899,7 @@ ul {
  line-height: 1.55;
  color: var(--text-muted);
  max-width: 34rem;
+ display: block;
 }
 
 .service-card__price {
@@ -906,6 +909,7 @@ ul {
  font-weight: 700;
  letter-spacing: 0.02em;
  color: var(--accent);
+ display: block;
 }
 
 .service-card--photo .service-card__inner {
@@ -1347,33 +1351,37 @@ ul {
  margin: 0;
 }
 
-.footer-map {
- padding: 0 0 2rem;
+.contacts-page {
+ border-top: 1px solid rgba(255, 255, 255, 0.04);
 }
 
-.footer-map__frame {
- width: 100%;
- margin: 0;
+.contacts-studio-shell {
+ background: var(--bg-elevated);
+ border: 1px solid rgba(255, 255, 255, 0.08);
  border-radius: var(--radius);
- overflow: hidden;
- border: 1px solid rgba(255, 255, 255, 0.12);
- box-shadow: 0 16px 56px rgba(0, 0, 0, 0.45);
- background: #0a0a0a;
- height: 350px;
+ padding: 2.25rem 2.5rem;
+ box-sizing: border-box;
 }
 
-.footer-map__frame iframe {
- display: block;
- width: 100%;
- height: 350px;
- border: 0;
+.contacts-studio__layout {
+ display: grid;
+ grid-template-columns: minmax(0, 1fr) minmax(0, 1.22fr);
+ gap: 2rem;
+ align-items: stretch;
 }
 
-.contacts-block__card {
- min-height: 0;
+.contacts-studio__info {
+ padding: 0;
+ margin: 0;
+ border: none;
+ background: transparent;
+ box-sizing: border-box;
+ display: flex;
+ flex-direction: column;
+ min-height: 100%;
 }
 
-.contacts-block__label {
+.contacts-studio__label {
  margin: 0 0 1rem;
  font-size: 0.72rem;
  text-transform: uppercase;
@@ -1381,7 +1389,7 @@ ul {
  color: var(--silver-dim);
 }
 
-.contacts-block__address {
+.contacts-studio__address {
  margin: 0 0 0.65rem;
  color: var(--accent);
  font-family: var(--font-display);
@@ -1390,29 +1398,73 @@ ul {
  line-height: 1.35;
 }
 
-.contacts-block__phone-line {
+.contacts-studio__phone-line {
  margin: 0;
  color: var(--text-muted);
  font-size: 0.98rem;
  line-height: 1.6;
 }
 
-.contacts-block__phone-line a {
+.contacts-studio__phone-line a {
  color: var(--silver);
  text-decoration: underline;
  text-underline-offset: 0.18em;
  transition: color var(--transition);
 }
 
-.contacts-block__phone-line a:hover {
+.contacts-studio__phone-line a:hover {
  color: var(--accent);
 }
 
-.contacts-block__actions {
- margin-top: 1.5rem;
+.contacts-studio__actions {
+ margin-top: auto;
+ padding-top: 1.5rem;
  display: flex;
  flex-wrap: wrap;
  gap: 0.75rem;
+}
+
+.contacts-studio__map {
+ position: relative;
+ border-radius: 1rem;
+ overflow: hidden;
+ border: 1px solid rgba(255, 255, 255, 0.12);
+ background: #0a0a0a;
+ min-height: 22rem;
+ height: 100%;
+ align-self: stretch;
+}
+
+.contacts-studio__map iframe {
+ position: absolute;
+ inset: 0;
+ width: 100%;
+ height: 100%;
+ border: 0;
+}
+
+@media (max-width: 900px) {
+ .contacts-studio-shell {
+ padding: 1.75rem 1.5rem;
+ }
+
+ .contacts-studio__layout {
+ grid-template-columns: 1fr;
+ gap: 1.35rem;
+ }
+
+ .contacts-studio__actions {
+ margin-top: 1.5rem;
+ padding-top: 0;
+ }
+
+ .contacts-studio__map {
+ min-height: 16rem;
+ }
+
+ .contacts-studio__map iframe {
+ min-height: 0;
+ }
 }
 
 .footer-strip {
@@ -1971,11 +2023,6 @@ ul {
  grid-column: span 12;
  grid-row: span 3;
  min-height: 200px;
- }
-
- .footer-map__frame {
- height: 350px;
- min-height: 350px;
  }
 
  .footer-strip__inner {
