@@ -380,35 +380,7 @@ ul {
  border-color: #ffffff;
 }
 
-a.btn.btn--primary[href*="t.me/GstaadDetailing"]:hover,
-a.btn.btn--hero-solid[href*="t.me/GstaadDetailing"]:hover,
-.footer-strip a.btn.btn--primary[href*="t.me/GstaadDetailing"]:hover,
-.header__cta[href*="t.me/GstaadDetailing"]:hover {
- background: linear-gradient(135deg, #c9a227 0%, #ecd089 42%, #a88615 100%);
- color: #0a0a0a;
- border-color: rgba(245, 230, 184, 0.95);
- box-shadow:
-  0 0 0 1px rgba(255, 250, 220, 0.35),
-  0 0 28px rgba(212, 175, 55, 0.55),
-  0 0 52px rgba(236, 208, 137, 0.28);
-}
-
-a.btn.btn--outline[href*="t.me/GstaadDetailing"]:hover,
-a.btn.btn--hero-ghost[href*="t.me/GstaadDetailing"]:hover {
- color: #f8fafc;
- background: rgba(212, 175, 55, 0.14);
- border-color: rgba(236, 208, 137, 0.65);
- box-shadow:
-  0 0 32px rgba(200, 205, 212, 0.38),
-  0 0 48px rgba(212, 175, 55, 0.24);
-}
-
-.service-card__cta[href*="t.me/GstaadDetailing"]:hover {
- color: #fdfbf6;
- filter: drop-shadow(0 0 12px rgba(236, 208, 137, 0.65));
-}
-
-.btn--lg {
+.header__cta {
  min-height: var(--btn-min-h);
  padding: var(--btn-pad-y) var(--btn-pad-x);
  font-family: var(--font-sans);
@@ -484,28 +456,6 @@ a.btn.btn--hero-ghost[href*="t.me/GstaadDetailing"]:hover {
  display: flex;
  flex-direction: column;
  gap: 0.5rem;
-}
-
-.footer-map {
- padding: 0 0 2rem;
-}
-
-.footer-map__frame {
- width: 100%;
- margin: 0;
- border-radius: var(--radius);
- overflow: hidden;
- border: 1px solid rgba(255, 255, 255, 0.12);
- box-shadow: 0 16px 56px rgba(0, 0, 0, 0.45);
- background: #0a0a0a;
- height: 350px;
-}
-
-.footer-map__frame iframe {
- display: block;
- width: 100%;
- height: 350px;
- border: 0;
 }
 
 .footer__bottom {
@@ -657,10 +607,31 @@ a.btn.btn--hero-ghost[href*="t.me/GstaadDetailing"]:hover {
 
 
 .page-hero {
+ position: relative;
+ isolation: isolate;
+ overflow: hidden;
  padding: 2.75rem 0 2.35rem;
  background-color: #050505;
  background-image: radial-gradient(circle at 40% 20%, #1f1f22 0%, #050505 55%);
  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.page-hero::before {
+ content: "";
+ position: absolute;
+ inset: 0;
+ z-index: 0;
+ pointer-events: none;
+ opacity: 0.065;
+ background-image:
+ linear-gradient(rgba(255, 255, 255, 0.26) 1px, transparent 1px),
+ linear-gradient(90deg, rgba(255, 255, 255, 0.26) 1px, transparent 1px);
+ background-size: 22px 22px;
+}
+
+.page-hero > .container {
+ position: relative;
+ z-index: 1;
 }
 
 .page-hero__title {
@@ -684,21 +655,33 @@ a.btn.btn--hero-ghost[href*="t.me/GstaadDetailing"]:hover {
  border-top: 1px solid rgba(255, 255, 255, 0.04);
 }
 
-.contacts-card {
- padding: 2.5rem;
- border-radius: var(--radius);
+.contacts-studio-shell {
  background: var(--bg-elevated);
  border: 1px solid rgba(255, 255, 255, 0.08);
+ border-radius: var(--radius);
+ padding: 2.25rem 2.5rem;
+ box-sizing: border-box;
 }
 
-.contacts-page__grid {
+.contacts-studio__layout {
  display: grid;
- grid-template-columns: 1fr 1.15fr;
+ grid-template-columns: minmax(0, 1fr) minmax(0, 1.22fr);
  gap: 2rem;
- align-items: start;
+ align-items: stretch;
 }
 
-.contacts-card__label {
+.contacts-studio__info {
+ padding: 0;
+ margin: 0;
+ border: none;
+ background: transparent;
+ box-sizing: border-box;
+ display: flex;
+ flex-direction: column;
+ min-height: 100%;
+}
+
+.contacts-studio__label {
  margin: 0 0 1rem;
  font-size: 0.72rem;
  text-transform: uppercase;
@@ -706,7 +689,7 @@ a.btn.btn--hero-ghost[href*="t.me/GstaadDetailing"]:hover {
  color: var(--silver-dim);
 }
 
-.contacts-card__address {
+.contacts-studio__address {
  margin: 0 0 0.65rem;
  color: var(--accent);
  font-family: var(--font-display);
@@ -715,47 +698,73 @@ a.btn.btn--hero-ghost[href*="t.me/GstaadDetailing"]:hover {
  line-height: 1.35;
 }
 
-.contacts-card__phone-line {
+.contacts-studio__phone-line {
  margin: 0;
  color: var(--text-muted);
  font-size: 0.98rem;
  line-height: 1.6;
 }
 
-.contacts-card__phone-line a {
+.contacts-studio__phone-line a {
  color: var(--silver);
  text-decoration: underline;
  text-underline-offset: 0.18em;
  transition: color var(--transition);
 }
 
-.contacts-card__phone-line a:hover {
+.contacts-studio__phone-line a:hover {
  color: var(--accent);
 }
 
-.contacts-card__actions {
- margin-top: 1.5rem;
+.contacts-studio__actions {
+ margin-top: auto;
+ padding-top: 1.5rem;
  display: flex;
  flex-wrap: wrap;
  gap: 0.75rem;
 }
 
-.contacts-page__map {
- border-radius: var(--radius);
+.contacts-studio__map {
+ position: relative;
+ border-radius: 1rem;
  overflow: hidden;
  border: 1px solid rgba(255, 255, 255, 0.12);
- box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
  background: #0a0a0a;
- height: 350px;
- min-height: 350px;
+ min-height: 22rem;
+ height: 100%;
+ align-self: stretch;
 }
 
-.contacts-page__map iframe {
- display: block;
+.contacts-studio__map iframe {
+ position: absolute;
+ inset: 0;
  width: 100%;
- height: 350px;
- min-height: 350px;
+ height: 100%;
  border: 0;
+}
+
+@media (max-width: 900px) {
+ .contacts-studio-shell {
+ padding: 1.75rem 1.5rem;
+ }
+
+ .contacts-studio__layout {
+ grid-template-columns: 1fr;
+ gap: 1.35rem;
+ }
+
+ .contacts-studio__actions {
+ margin-top: 1.5rem;
+ padding-top: 0;
+ }
+
+ .contacts-studio__map {
+ min-height: 16rem;
+ }
+
+ .contacts-studio__map iframe {
+ min-height: 0;
+ }
 }
 
 .reveal {
@@ -767,12 +776,6 @@ a.btn.btn--hero-ghost[href*="t.me/GstaadDetailing"]:hover {
 .reveal.is-visible {
  opacity: 1;
  transform: translateY(0);
-}
-
-@media (max-width: 900px) {
- .contacts-page__grid {
- grid-template-columns: 1fr;
- }
 }
 
 .footer-strip {
@@ -1148,21 +1151,6 @@ a.btn.btn--hero-ghost[href*="t.me/GstaadDetailing"]:hover {
  width: 100%;
  max-width: 100%;
  justify-content: center;
- }
-
- .contacts-page__map {
- height: 350px;
- min-height: 350px;
- }
-
- .contacts-page__map iframe {
- height: 350px;
- min-height: 350px;
- }
-
- .footer-map__frame {
- height: 350px;
- min-height: 350px;
  }
 
  .footer__grid {

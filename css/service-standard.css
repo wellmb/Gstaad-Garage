@@ -1,4 +1,4 @@
-
+﻿
 
 :root {
  --bg-deep: #0a0a0a;
@@ -380,34 +380,6 @@ ul {
  border-color: #ffffff;
 }
 
-a.btn.btn--primary[href*="t.me/GstaadDetailing"]:hover,
-a.btn.btn--hero-solid[href*="t.me/GstaadDetailing"]:hover,
-.footer-strip a.btn.btn--primary[href*="t.me/GstaadDetailing"]:hover,
-.header__cta[href*="t.me/GstaadDetailing"]:hover {
- background: linear-gradient(135deg, #c9a227 0%, #ecd089 42%, #a88615 100%);
- color: #0a0a0a;
- border-color: rgba(245, 230, 184, 0.95);
- box-shadow:
-  0 0 0 1px rgba(255, 250, 220, 0.35),
-  0 0 28px rgba(212, 175, 55, 0.55),
-  0 0 52px rgba(236, 208, 137, 0.28);
-}
-
-a.btn.btn--outline[href*="t.me/GstaadDetailing"]:hover,
-a.btn.btn--hero-ghost[href*="t.me/GstaadDetailing"]:hover {
- color: #f8fafc;
- background: rgba(212, 175, 55, 0.14);
- border-color: rgba(236, 208, 137, 0.65);
- box-shadow:
-  0 0 32px rgba(200, 205, 212, 0.38),
-  0 0 48px rgba(212, 175, 55, 0.24);
-}
-
-.service-card__cta[href*="t.me/GstaadDetailing"]:hover {
- color: #fdfbf6;
- filter: drop-shadow(0 0 12px rgba(236, 208, 137, 0.65));
-}
-
 .btn--lg {
  min-height: var(--btn-min-h);
  padding: var(--btn-pad-y) var(--btn-pad-x);
@@ -685,10 +657,31 @@ a.btn.btn--hero-ghost[href*="t.me/GstaadDetailing"]:hover {
 
 
 .page-hero {
+ position: relative;
+ isolation: isolate;
+ overflow: hidden;
  padding: 2.75rem 0 2.35rem;
  background-color: #050505;
  background-image: radial-gradient(circle at 40% 20%, #1f1f22 0%, #050505 55%);
  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.page-hero::before {
+ content: "";
+ position: absolute;
+ inset: 0;
+ z-index: 0;
+ pointer-events: none;
+ opacity: 0.065;
+ background-image:
+ linear-gradient(rgba(255, 255, 255, 0.26) 1px, transparent 1px),
+ linear-gradient(90deg, rgba(255, 255, 255, 0.26) 1px, transparent 1px);
+ background-size: 22px 22px;
+}
+
+.page-hero > .container {
+ position: relative;
+ z-index: 1;
 }
 
 .page-hero__title {
