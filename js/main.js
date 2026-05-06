@@ -113,6 +113,17 @@
     });
   }
 
+  document.addEventListener(
+    "click",
+    function (e) {
+      if (!document.body.classList.contains("nav-open")) return;
+      if (!navMenu || !navToggle) return;
+      if (navMenu.contains(e.target) || navToggle.contains(e.target)) return;
+      closeMobileNav();
+    },
+    true
+  );
+
   if (navClose) {
     navClose.addEventListener("click", function (e) {
       e.stopPropagation();
@@ -190,65 +201,54 @@
       handle.setAttribute("aria-valuenow", String(Math.round(p)));
     }
 
-    var dragging = false;
+    var activePointerId = null;
 
-    function onDocMouseMove(e) {
-      if (!dragging) return;
+    function clearPointerListeners(el) {
+      el.removeEventListener("pointermove", onPointerMove);
+      el.removeEventListener("pointerup", onPointerEnd);
+      el.removeEventListener("pointercancel", onPointerEnd);
+    }
+
+    function onPointerMove(e) {
+      if (e.pointerId !== activePointerId) return;
       setPos(posFromClient(e.clientX));
     }
 
-    function endDrag() {
-      dragging = false;
+    function onPointerEnd(e) {
+      if (e.pointerId !== activePointerId) return;
+      activePointerId = null;
+      try {
+        track.releasePointerCapture(e.pointerId);
+      } catch (err1) {}
+      try {
+        handle.releasePointerCapture(e.pointerId);
+      } catch (err2) {}
+      clearPointerListeners(track);
+      clearPointerListeners(handle);
     }
 
-    track.addEventListener("mousedown", function (e) {
-      if (e.button !== 0) return;
+    track.addEventListener("pointerdown", function (e) {
+      if (e.pointerType === "mouse" && e.button !== 0) return;
       if (handle.contains(e.target)) return;
-      dragging = true;
+      activePointerId = e.pointerId;
+      track.setPointerCapture(e.pointerId);
+      track.addEventListener("pointermove", onPointerMove);
+      track.addEventListener("pointerup", onPointerEnd);
+      track.addEventListener("pointercancel", onPointerEnd);
       setPos(posFromClient(e.clientX));
       e.preventDefault();
     });
 
-    handle.addEventListener("mousedown", function (e) {
+    handle.addEventListener("pointerdown", function (e) {
+      if (e.pointerType === "mouse" && e.button !== 0) return;
       e.stopPropagation();
-      if (e.button !== 0) return;
-      dragging = true;
+      activePointerId = e.pointerId;
+      handle.setPointerCapture(e.pointerId);
+      handle.addEventListener("pointermove", onPointerMove);
+      handle.addEventListener("pointerup", onPointerEnd);
+      handle.addEventListener("pointercancel", onPointerEnd);
       e.preventDefault();
     });
-
-    document.addEventListener("mousemove", onDocMouseMove);
-    document.addEventListener("mouseup", endDrag);
-
-    track.addEventListener(
-      "touchstart",
-      function (e) {
-        if (handle.contains(e.target)) return;
-        if (!e.touches[0]) return;
-        dragging = true;
-        setPos(posFromClient(e.touches[0].clientX));
-      },
-      { passive: true }
-    );
-
-    handle.addEventListener(
-      "touchstart",
-      function (e) {
-        e.stopPropagation();
-        dragging = true;
-      },
-      { passive: true }
-    );
-
-    document.addEventListener(
-      "touchmove",
-      function (e) {
-        if (!dragging || !e.touches[0]) return;
-        setPos(posFromClient(e.touches[0].clientX));
-      },
-      { passive: true }
-    );
-    document.addEventListener("touchend", endDrag);
-    document.addEventListener("touchcancel", endDrag);
 
     handle.addEventListener("keydown", function (e) {
       if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
@@ -291,4 +291,5 @@
       cookieBanner.hidden = true;
     });
   }
+
 })();

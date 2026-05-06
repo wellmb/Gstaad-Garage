@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Детейлинг-мойка двигателя — Gstaad Garage</title>
+<title>Мойка двигателя — Gstaad Garage</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/service-engine.css">
+<link rel="stylesheet" href="css/services.css">
+<link rel="stylesheet" href="css/service-detail-page.css">
 </head>
 <body>
 <header class="header" id="header">
@@ -23,16 +24,24 @@
 <li><a class="nav__link" href="index.html#gallery">Галерея</a></li>
 <li><a class="nav__link" href="index.html#about">О студии</a></li>
 <li class="nav__item--dropdown">
-<a class="nav__link nav__link--active" href="index.html#services">Услуги</a>
+<a class="nav__link" href="services.html">Услуги</a>
 <ul class="nav__submenu">
-<li><a class="nav__sublink" href="services.html#svc-tire">Шиномонтаж R18</a></li>
-<li><a class="nav__sublink" href="service-standard.html">Комплекс «Стандарт»</a></li>
-<li><a class="nav__sublink" href="service-engine.html">Мойка двигателя</a></li>
-<li><a class="nav__sublink" href="service-polishing.html">Полировка кузова</a></li>
-<li><a class="nav__sublink" href="service-ceramic.html">Керамика дисков</a></li>
-<li><a class="nav__sublink" href="service-pdr.html">PDR</a></li>
-<li><a class="nav__sublink" href="service-film.html">Защитная плёнка</a></li>
-<li><a class="nav__sublink" href="services.html#interior-clean">Химчистка салона</a></li>
+<li class="nav__submenu-heading"><span>Шиномонтаж</span></li>
+<li><a class="nav__sublink" href="services.html#cat-shinomontazh">Сезонная смена 4 800 – 10 200 ₽</a></li>
+<li class="nav__submenu-heading"><span>Детейлинг кузова</span></li>
+<li><a class="nav__sublink" href="services.html#card-polish">Полировка от 28 000 ₽</a></li>
+<li><a class="nav__sublink" href="services.html#card-ceramic-lkp">Керамика от 12 000 ₽</a></li>
+<li><a class="nav__sublink" href="services.html#card-clay">Очистка глиной 6 000 ₽</a></li>
+<li class="nav__submenu-heading"><span>Химчистка салона</span></li>
+<li><a class="nav__sublink" href="services.html#cat-interior-leather">Кожа от 12 000 ₽</a></li>
+<li><a class="nav__sublink" href="services.html#cat-interior-carpet">Ковролин 8 000 ₽</a></li>
+<li><a class="nav__sublink" href="services.html#cat-interior-ozone">Озонация 25 000 ₽</a></li>
+<li class="nav__submenu-heading"><span>Защита (плёнка)</span></li>
+<li><a class="nav__sublink" href="services.html#cat-film-risk">Зоны риска 110 000 ₽</a></li>
+<li><a class="nav__sublink" href="services.html#cat-film-full">Весь кузов 250 000 ₽</a></li>
+<li class="nav__submenu-heading"><span>Дополнительно</span></li>
+<li><a class="nav__sublink" href="services.html#cat-extra-engine">Мойка двигателя 3 500 ₽</a></li>
+<li><a class="nav__sublink" href="services.html#cat-extra-pdr">PDR от 8 000 ₽</a></li>
 </ul>
 </li>
 <li><a class="nav__link" href="contacts.html">Контакты</a></li>
@@ -45,14 +54,13 @@
 </div>
 </div>
 </header>
-
 <main>
 <section class="page-hero page-hero--service">
 <div class="container reveal">
-<p class="page-hero__meta">Моторный отсек</p>
-<h1 class="page-hero__title">Детейлинг-мойка двигателя</h1>
-<p class="page-hero__lead">Аккуратная очистка подкапотного пространства с акцентом на сохранение пластика, резины и электрики без избыточного давления и воды в узлах.</p>
-<p class="page-hero__price">от 2 000 ₽</p>
+<p class="page-hero__meta">Дополнительно · моторный отсек</p>
+<h1 class="page-hero__title">Мойка двигателя</h1>
+<p class="page-hero__lead">Аккуратная очистка моторного отсека с контролем чувствительных узлов.</p>
+<p class="page-hero__price">3 500 ₽</p>
 <div class="page-hero__actions">
 <a class="btn btn--primary btn--lg" href="https://t.me/GstaadDetailing" target="_blank" rel="noopener noreferrer">Записаться через Telegram</a>
 <a class="btn btn--outline btn--lg" href="services.html">Все услуги</a>
@@ -63,42 +71,38 @@
 <section class="svc-body section">
 <div class="container">
 <div class="svc-detail__grid">
+
 <div class="svc-detail__panel reveal">
 <h2>Что входит в услугу</h2>
 <ul class="svc-detail__list">
-<li>Температурный контроль и маскировка чувствительных узлов при необходимости</li>
-<li>Пошаговая очистка агрегата и прилегающих элементов щадящими составами</li>
-<li>Пропись пластиковых поверхностей без липкого слоя и «сыпучего» блеска</li>
-<li>Сушка и финальный осмотр доступных разъёмов и уплотнений</li>
+<li>Защита чувствительных разъёмов и блоков по студийному регламенту</li>
+<li>Щадящая очистка от масляной крошки и дорожной пыли без избыточного давления</li>
+<li>Протирка и сушка доступных зон с контролем влаги</li>
+<li>Лёгкая консервация пластика и резины при необходимости</li>
 </ul>
 </div>
 <div class="svc-detail__panel reveal">
 <h2>Преимущества</h2>
 <ul class="svc-detail__list">
-<li>Студия на Малой Посадской, 13Д: премиальный цикл работ, актуальные расходники и фиксация этапов до старта.</li>
-<li>Снижение накопления дорожной химии и коррозионных факторов на металле и крепежах</li>
-<li>Комфорт при показе автомобиля и при диагностике без «индустриального» вида отсека</li>
-<li>Прозрачное описание зон риска до начала работ</li>
-<li>Сочетается с комплексной мойкой и подготовкой к сезону хранения</li>
+<li>Снижение риска коррозии на металлических элементах при аккуратном протоколе</li>
+<li>Эстетика при продаже и на выставочной подаче автомобиля</li>
+<li>Прозрачное описание ограничений до старта при нештатной проводке</li>
 </ul>
 </div>
 <div class="svc-detail__panel svc-detail__panel--wide reveal">
 <h2>Этапы работы</h2>
 <ul class="svc-steps__list">
-<li>Холодный осмотр, фиксация состояния проводки и уплотнителей</li>
-<li>Предварительное удаление пыли и масляной плёнки без распыления на генератор и блоки</li>
-<li>Основная стадия детейлинга щётками и микрофиброй под контролем расхода воды</li>
-<li>Пропитка пластика и резины, сушка сжатым воздухом, финальный контроль</li>
+<li>Осмотр отсека и согласование зон протектирования</li>
+<li>Предварительная мягкая очистка и адресная обработка загрязнений</li>
+<li>Контроль влаги на чувствительных узлах и финишная протирка</li>
+<li>Рекомендации по интервалам повторной процедуры</li>
 </ul>
 </div>
 <div class="svc-detail__panel svc-detail__panel--wide reveal">
 <h2>Используемые материалы</h2>
-<p>Щелочность подбирается под степень загрязнения и тип покрытий; используются специализированные очистители для масляных отложений и щадящие составы для алюминиевых и лакированных элементов.</p>
-<ul class="svc-detail__list">
-<li>Отдельный комплект микрофибры только для моторного отсека</li>
-<li>Кондиционеры для резины и пластика без силикона с обратным блеском при запросе «мат»</li>
-</ul>
+<p>Дегрессоры без агрессии к алюминиевым и окрашенным поверхностям; консерванты без силиконового налёта на горячих участках.</p>
 </div>
+
 </div>
 </div>
 </section>
@@ -112,7 +116,6 @@
 </div>
 </section>
 </main>
-
 <footer class="footer">
 <div class="container footer__grid">
 <div class="footer__brand">

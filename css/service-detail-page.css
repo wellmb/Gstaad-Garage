@@ -1,0 +1,93 @@
+
+.page-hero--service {
+ min-height: min(72vh, 640px);
+ display: flex;
+ align-items: center;
+ padding: 4.5rem 0 3.5rem;
+ background-image: radial-gradient(circle at 50% 22%, #2a2a2e 0%, #050505 58%);
+}
+
+.page-hero__meta {
+ margin: 0 0 1rem;
+ font-size: 0.72rem;
+ font-weight: 500;
+ text-transform: uppercase;
+ letter-spacing: 0.22em;
+ color: var(--silver-dim);
+}
+
+.page-hero__price {
+ margin: 1.35rem 0 0;
+ font-family: var(--font-display);
+ font-size: clamp(1.35rem, 3vw, 1.85rem);
+ font-weight: 700;
+ letter-spacing: 0.04em;
+ color: var(--accent);
+}
+
+.page-hero__note {
+ margin: 0.65rem 0 0;
+ max-width: 560px;
+ font-size: 0.95rem;
+ color: var(--silver);
+ line-height: 1.55;
+}
+
+.page-hero__actions {
+ margin-top: 2rem;
+ display: flex;
+ flex-wrap: wrap;
+ gap: 1rem;
+ align-items: center;
+}
+
+.svc-body {
+ background: var(--bg-deep);
+ border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.svc-back {
+ padding: 2.25rem 0 3.5rem;
+ border-top: 1px solid rgba(255, 255, 255, 0.06);
+ text-align: center;
+}
+
+.svc-back__actions {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 0.75rem;
+ justify-content: center;
+ align-items: center;
+}
+
+@media (max-width: 768px) {
+ .page-hero--service {
+ min-height: auto;
+ padding: 2.5rem max(18px, env(safe-area-inset-left)) 2rem;
+ align-items: flex-start;
+ }
+
+ .page-hero__price {
+ font-size: 1.25rem;
+ }
+
+ .page-hero__actions {
+ margin-top: 1.5rem;
+ }
+
+ .page-hero__actions .btn {
+ flex: 1 1 100%;
+ justify-content: center;
+ min-height: 50px;
+ }
+
+ .svc-back {
+ padding: 1.75rem 0 2.5rem;
+ }
+
+ .svc-back__actions .btn {
+ width: 100%;
+ justify-content: center;
+ min-height: 50px;
+ }
+}

@@ -23,16 +23,24 @@
 <li><a class="nav__link" href="index.html#gallery">Галерея</a></li>
 <li><a class="nav__link" href="index.html#about">О студии</a></li>
 <li class="nav__item--dropdown">
-<a class="nav__link nav__link--active" href="index.html#services">Услуги</a>
+<a class="nav__link nav__link--active" href="services.html">Услуги</a>
 <ul class="nav__submenu">
-<li><a class="nav__sublink" href="services.html#svc-tire">Шиномонтаж R18</a></li>
-<li><a class="nav__sublink" href="service-standard.html">Комплекс «Стандарт»</a></li>
-<li><a class="nav__sublink" href="service-engine.html">Мойка двигателя</a></li>
-<li><a class="nav__sublink" href="service-polishing.html">Полировка кузова</a></li>
-<li><a class="nav__sublink" href="service-ceramic.html">Керамика дисков</a></li>
-<li><a class="nav__sublink" href="service-pdr.html">PDR</a></li>
-<li><a class="nav__sublink" href="service-film.html">Защитная плёнка</a></li>
-<li><a class="nav__sublink" href="services.html#interior-clean">Химчистка салона</a></li>
+<li class="nav__submenu-heading"><span>Шиномонтаж</span></li>
+<li><a class="nav__sublink" href="services.html#cat-shinomontazh">Сезонная смена 4 800 – 10 200 ₽</a></li>
+<li class="nav__submenu-heading"><span>Детейлинг кузова</span></li>
+<li><a class="nav__sublink" href="services.html#card-polish">Полировка от 28 000 ₽</a></li>
+<li><a class="nav__sublink" href="services.html#card-ceramic-lkp">Керамика от 12 000 ₽</a></li>
+<li><a class="nav__sublink" href="services.html#card-clay">Очистка глиной 6 000 ₽</a></li>
+<li class="nav__submenu-heading"><span>Химчистка салона</span></li>
+<li><a class="nav__sublink" href="services.html#cat-interior-leather">Кожа от 12 000 ₽</a></li>
+<li><a class="nav__sublink" href="services.html#cat-interior-carpet">Ковролин 8 000 ₽</a></li>
+<li><a class="nav__sublink" href="services.html#cat-interior-ozone">Озонация 25 000 ₽</a></li>
+<li class="nav__submenu-heading"><span>Защита (плёнка)</span></li>
+<li><a class="nav__sublink" href="services.html#cat-film-risk">Зоны риска 110 000 ₽</a></li>
+<li><a class="nav__sublink" href="services.html#cat-film-full">Весь кузов 250 000 ₽</a></li>
+<li class="nav__submenu-heading"><span>Дополнительно</span></li>
+<li><a class="nav__sublink" href="services.html#cat-extra-engine">Мойка двигателя 3 500 ₽</a></li>
+<li><a class="nav__sublink" href="services.html#cat-extra-pdr">PDR от 8 000 ₽</a></li>
 </ul>
 </li>
 <li><a class="nav__link" href="contacts.html">Контакты</a></li>
@@ -55,88 +63,168 @@
 </section>
 
 <section class="services-preview section" id="services-list">
-<div class="container">
+<div class="container services-list__stack">
+<div class="services-category reveal" id="cat-shinomontazh">
+<h2 class="services-category__title">Шиномонтаж</h2>
+<p class="services-category__lead">Профессиональный шиномонтаж на топовом оборудовании. Включает деликатный демонтаж, высокоточную балансировку и проверку состояния дисков. Работаем с любым диаметром и низким профилем.</p>
 <div class="services-preview__grid">
-<a class="service-card service-card--photo reveal" id="svc-tire" href="https://t.me/GstaadDetailing" target="_blank" rel="noopener noreferrer" aria-label="Шиномонтаж R18, от 6 600 ₽" style="--card-image: url('img/porshe-bblue.webp')">
+<div class="service-card service-card--photo reveal" style="--card-image: url('img/porshe-bblue.webp')">
 <span class="service-card__photo" aria-hidden="true"></span>
 <span class="service-card__grid" aria-hidden="true"></span>
 <span class="service-card__overlay" aria-hidden="true"></span>
-<span class="service-card__inner">
-<span class="service-card__title">Шиномонтаж R18</span>
-<span class="service-card__text">Сезонная переобувка и балансировка для R18; другие диаметры и допы — по договорённости.</span>
-<span class="service-card__price">от 6 600 ₽</span>
-</span>
-</a>
-<a class="service-card service-card--photo reveal" id="svc-standard" href="service-standard.html" aria-label="Комплекс «Стандарт», от 3 000 ₽" style="--card-image: url('img/porshe-gold.webp')">
+<a class="service-card__hitbox" href="service-shinomontazh.html" aria-label="Подробнее: сезонная смена шин, от 4 800 до 10 200 ₽"></a>
+<div class="service-card__inner">
+<span class="service-card__meta">Шиномонтаж · сезон</span>
+<span class="service-card__title">Сезонная смена</span>
+<span class="service-card__text">Переобувка и балансировка с контролем состояния резины и посадочных мест.</span>
+<span class="service-card__price">4 800 – 10 200 ₽</span>
+</div>
+</div>
+</div>
+</div>
+<div class="services-category reveal" id="cat-detailing-kuzova">
+<h2 class="services-category__title">Детейлинг кузова</h2>
+<p class="services-category__lead">Восстановление и защита экстерьера. Глубокая полировка для зеркального блеска, нанесение керамических составов и очистка кузова автоскрабом или глиной от стойких загрязнений.</p>
+<div class="services-preview__grid">
+<div class="service-card service-card--photo reveal" id="card-polish" style="--card-image: url('img/mercedes.webp')">
 <span class="service-card__photo" aria-hidden="true"></span>
 <span class="service-card__grid" aria-hidden="true"></span>
 <span class="service-card__overlay" aria-hidden="true"></span>
-<span class="service-card__inner">
-<span class="service-card__title">Комплекс «Стандарт»</span>
-<span class="service-card__text">Базовый премиальный цикл мойки и финальный контроль кузова под студийным светом.</span>
-<span class="service-card__price">от 3 000 ₽</span>
-</span>
-</a>
-<a class="service-card service-card--photo reveal" id="svc-engine" href="service-engine.html" aria-label="Мойка двигателя, от 2 000 ₽" style="--card-image: url('img/carwash.webp')">
+<a class="service-card__hitbox" href="service-polishing.html" aria-label="Подробнее: полировка кузова от 28 000 ₽"></a>
+<div class="service-card__inner">
+<span class="service-card__meta">Детейлинг · полировка</span>
+<span class="service-card__title">Полировка кузова</span>
+<span class="service-card__text">Восстановление глубины и однородности лака перед защитными системами.</span>
+<span class="service-card__price">от 28 000 ₽</span>
+</div>
+</div>
+<div class="service-card service-card--photo reveal" id="card-ceramic-lkp" style="--card-image: url('img/porshe-bblack.webp')">
 <span class="service-card__photo" aria-hidden="true"></span>
 <span class="service-card__grid" aria-hidden="true"></span>
 <span class="service-card__overlay" aria-hidden="true"></span>
-<span class="service-card__inner">
-<span class="service-card__title">Детейлинг-мойка двигателя</span>
-<span class="service-card__text">Аккуратная очистка моторного отсека с уважением к пластику и электрике.</span>
-<span class="service-card__price">от 2 000 ₽</span>
-</span>
-</a>
-<a class="service-card service-card--photo reveal" id="svc-polish" href="service-polishing.html" aria-label="Полировка кузова, от 20 000 ₽" style="--card-image: url('img/mercedes.webp')">
+<a class="service-card__hitbox" href="service-ceramic-lkp.html" aria-label="Подробнее: керамика ЛКП от 12 000 ₽"></a>
+<div class="service-card__inner">
+<span class="service-card__meta">Детейлинг · керамика</span>
+<span class="service-card__title">Керамика ЛКП</span>
+<span class="service-card__text">Гидрофобное покрытие кузова премиальными составами; объём и связку с полировкой уточним заранее.</span>
+<span class="service-card__price">от 12 000 ₽</span>
+</div>
+</div>
+<div class="service-card service-card--photo reveal" id="card-clay" style="--card-image: url('img/reds.webp')">
 <span class="service-card__photo" aria-hidden="true"></span>
 <span class="service-card__grid" aria-hidden="true"></span>
 <span class="service-card__overlay" aria-hidden="true"></span>
-<span class="service-card__inner">
-<span class="service-card__title">Полировка кузова (полная)</span>
-<span class="service-card__text">Восстановление глубины лака и подготовка поверхности под защитные системы.</span>
-<span class="service-card__price">от 20 000 ₽</span>
-</span>
-</a>
-<a class="service-card service-card--photo reveal" id="svc-wheels" href="service-ceramic.html" aria-label="Керамика дисков, от 8 000 ₽" style="--card-image: url('img/porshe-bblack.webp')">
+<a class="service-card__hitbox" href="service-clay.html" aria-label="Подробнее: очистка глиной 6 000 ₽"></a>
+<div class="service-card__inner">
+<span class="service-card__meta">Детейлинг · очистка</span>
+<span class="service-card__title">Очистка глиной</span>
+<span class="service-card__text">Удаление въевшейся дорожной плёнки и контаминации перед покрытиями или мойкой.</span>
+<span class="service-card__price">6 000 ₽</span>
+</div>
+</div>
+</div>
+</div>
+<div class="services-category reveal" id="cat-interior">
+<h2 class="services-category__title">Химчистка салона</h2>
+<p class="services-category__lead">Комплексная очистка интерьера: от ковролина до потолка. Деликатная работа с премиальной кожей, озонация для удаления запахов и консервация защитными составами.</p>
+<div class="services-preview__grid">
+<div class="service-card service-card--photo reveal" id="cat-interior-leather" style="--card-image: url('img/bentley-salon1.jpg')">
 <span class="service-card__photo" aria-hidden="true"></span>
 <span class="service-card__grid" aria-hidden="true"></span>
 <span class="service-card__overlay" aria-hidden="true"></span>
-<span class="service-card__inner">
-<span class="service-card__title">Керамическое покрытие дисков</span>
-<span class="service-card__text">Гидрофобная защита спиц и обода — проще регулярный уход и меньше коррозионных факторов.</span>
-<span class="service-card__price">от 8 000 ₽</span>
-</span>
-</a>
-<a class="service-card service-card--photo reveal" id="svc-pdr" href="service-pdr.html" aria-label="PDR, от 8 000 ₽ за элемент" style="--card-image: url('img/porshe-blacn.webp')">
+<a class="service-card__hitbox" href="service-interior-leather.html" aria-label="Подробнее: химчистка кожи салона от 12 000 ₽"></a>
+<div class="service-card__inner">
+<span class="service-card__meta">Салон · кожа</span>
+<span class="service-card__title">Кожа</span>
+<span class="service-card__text">Очистка и кондиционирование кожаных поверхностей без пересушивания швов.</span>
+<span class="service-card__price">от 12 000 ₽</span>
+</div>
+</div>
+<div class="service-card service-card--photo reveal" id="cat-interior-carpet" style="--card-image: url('img/carwash.webp')">
 <span class="service-card__photo" aria-hidden="true"></span>
 <span class="service-card__grid" aria-hidden="true"></span>
 <span class="service-card__overlay" aria-hidden="true"></span>
-<span class="service-card__inner">
+<a class="service-card__hitbox" href="service-interior-carpet.html" aria-label="Подробнее: химчистка ковролина 8 000 ₽"></a>
+<div class="service-card__inner">
+<span class="service-card__meta">Салон · ковролин</span>
+<span class="service-card__title">Ковролин</span>
+<span class="service-card__text">Вынос загрязнений из ворса и подложки с контролем влажности.</span>
+<span class="service-card__price">8 000 ₽</span>
+</div>
+</div>
+<div class="service-card service-card--photo reveal" id="cat-interior-ozone" style="--card-image: url('img/porshe-gold.webp')">
+<span class="service-card__photo" aria-hidden="true"></span>
+<span class="service-card__grid" aria-hidden="true"></span>
+<span class="service-card__overlay" aria-hidden="true"></span>
+<a class="service-card__hitbox" href="service-ozone.html" aria-label="Подробнее: озонация салона 25 000 ₽"></a>
+<div class="service-card__inner">
+<span class="service-card__meta">Салон · озонация</span>
+<span class="service-card__title">Озонация</span>
+<span class="service-card__text">Обработка салона озоном после химчистки или подготовки к продаже.</span>
+<span class="service-card__price">25 000 ₽</span>
+</div>
+</div>
+</div>
+</div>
+<div class="services-category reveal" id="cat-film">
+<h2 class="services-category__title">Защита (плёнка)</h2>
+<p class="services-category__lead">Оклейка премиальной полиуретановой плёнкой зон риска или полного кузова с акцентом на скрытые кромки, долговечность покрытия и сохранение заводского рельефа ЛКП. Плёнка обладает эффектом самовосстановления.</p>
+<div class="services-preview__grid">
+<div class="service-card service-card--photo reveal" id="cat-film-risk" style="--card-image: url('img/bwm-black.webp')">
+<span class="service-card__photo" aria-hidden="true"></span>
+<span class="service-card__grid" aria-hidden="true"></span>
+<span class="service-card__overlay" aria-hidden="true"></span>
+<a class="service-card__hitbox" href="service-film-risk.html" aria-label="Подробнее: зоны риска PPF 110 000 ₽"></a>
+<div class="service-card__inner">
+<span class="service-card__meta">PPF · антигравий</span>
+<span class="service-card__title">Зоны риска</span>
+<span class="service-card__text">Локальная оклейка уязвимых элементов по шаблону и кромочной дисциплине студии.</span>
+<span class="service-card__price">110 000 ₽</span>
+</div>
+</div>
+<div class="service-card service-card--photo reveal" id="cat-film-full" style="--card-image: url('img/mercedes.webp')">
+<span class="service-card__photo" aria-hidden="true"></span>
+<span class="service-card__grid" aria-hidden="true"></span>
+<span class="service-card__overlay" aria-hidden="true"></span>
+<a class="service-card__hitbox" href="service-film-full.html" aria-label="Подробнее: оклейка всего кузова PPF 250 000 ₽"></a>
+<div class="service-card__inner">
+<span class="service-card__meta">PPF · антигравий</span>
+<span class="service-card__title">Весь кузов</span>
+<span class="service-card__text">Полная защита кузова премиальной плёнкой с подготовкой ЛКП под монтаж.</span>
+<span class="service-card__price">250 000 ₽</span>
+</div>
+</div>
+</div>
+</div>
+<div class="services-category reveal" id="cat-extra">
+<h2 class="services-category__title">Дополнительно</h2>
+<p class="services-category__lead">Специализированные услуги: безопасная мойка двигателя с консервацией, удаление вмятин без покраски (PDR) и реставрация отдельных элементов интерьера.</p>
+<div class="services-preview__grid">
+<div class="service-card service-card--photo reveal" id="cat-extra-engine" style="--card-image: url('img/carwash.webp')">
+<span class="service-card__photo" aria-hidden="true"></span>
+<span class="service-card__grid" aria-hidden="true"></span>
+<span class="service-card__overlay" aria-hidden="true"></span>
+<a class="service-card__hitbox" href="service-engine.html" aria-label="Подробнее: мойка двигателя 3 500 ₽"></a>
+<div class="service-card__inner">
+<span class="service-card__meta">Дополнительно · моторный отсек</span>
+<span class="service-card__title">Мойка двигателя</span>
+<span class="service-card__text">Аккуратная очистка моторного отсека с контролем чувствительных узлов.</span>
+<span class="service-card__price">3 500 ₽</span>
+</div>
+</div>
+<div class="service-card service-card--photo reveal" id="cat-extra-pdr" style="--card-image: url('img/porshe-blacn.webp')">
+<span class="service-card__photo" aria-hidden="true"></span>
+<span class="service-card__grid" aria-hidden="true"></span>
+<span class="service-card__overlay" aria-hidden="true"></span>
+<a class="service-card__hitbox" href="service-pdr.html" aria-label="Подробнее: удаление вмятин PDR от 8 000 ₽"></a>
+<div class="service-card__inner">
+<span class="service-card__meta">Дополнительно · без покраски</span>
 <span class="service-card__title">Удаление вмятин (PDR)</span>
-<span class="service-card__text">Точечное выпрямление без окраса там, где позволяют доступ и геометрия повреждения.</span>
-<span class="service-card__price">от 8 000 ₽ за элемент</span>
-</span>
-</a>
-<a class="service-card service-card--photo reveal" id="svc-ppf" href="service-film.html" aria-label="Защитная плёнка, от 10 000 ₽" style="--card-image: url('img/bwm-black.webp')">
-<span class="service-card__photo" aria-hidden="true"></span>
-<span class="service-card__grid" aria-hidden="true"></span>
-<span class="service-card__overlay" aria-hidden="true"></span>
-<span class="service-card__inner">
-<span class="service-card__title">Оклейка защитной плёнкой</span>
-<span class="service-card__text">PPF премиального класса для уязвимых зон или полного кузова — по вашему сценарию эксплуатации.</span>
-<span class="service-card__price">от 10 000 ₽</span>
-</span>
-</a>
-<a class="service-card service-card--photo service-card--wide reveal" id="interior-clean" href="https://t.me/GstaadDetailing" target="_blank" rel="noopener noreferrer" aria-label="Химчистка салона — уточнить в Telegram" style="--card-image: url('img/cayen-blue.webp')">
-<span class="service-card__photo" aria-hidden="true"></span>
-<span class="service-card__grid" aria-hidden="true"></span>
-<span class="service-card__overlay" aria-hidden="true"></span>
-<span class="service-card__inner">
-<span class="service-card__title">Химчистка салона</span>
-<span class="service-card__text">Глубокая очистка текстиля и кожи; объём и стоимость фиксируем после осмотра салона.</span>
-<span class="service-card__price">по запросу</span>
-</span>
-</a>
+<span class="service-card__text">Точечное выправление без покраски там, где допускает доступ к металлу.</span>
+<span class="service-card__price">от 8 000 ₽</span>
+</div>
+</div>
+</div>
 </div>
 <div class="services-preview__cta reveal">
 <a class="btn btn--outline btn--lg" href="index.html">На главную</a>
